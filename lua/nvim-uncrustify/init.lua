@@ -26,7 +26,6 @@ local function preserve_and_run_command(cmd)
 end
 
 function M.run_uncrustify()
-    print("Run Uncrustify" .. M.config.config_path)
     local exec = M.config.uncrustify_executable
     local config = M.config.config_path
     local command = string.format(":silent exec \"%%!%s -q -l -c %s\"", exec, config)
